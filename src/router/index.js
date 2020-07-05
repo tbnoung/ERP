@@ -6,6 +6,7 @@ import Seller from '@/page/seller'
 import Stock from '@/page/stock'
 import PDF from '@/page/pdf'
 import TestPage from '@/views/About'
+import EditPurchase from '@/components/purchase/edit'
 
 Vue.use(VueRouter)
 
@@ -17,7 +18,8 @@ const routes = [
     children: [
       { path: '/', component: Purchase },
       { path: '/seller', component: Seller },
-      { path: '/stock', component: Stock }
+      { path: '/stock', component: Stock },
+      { path: '/edit', component: EditPurchase }
     ]
   },
   { path: '/pdf', component: PDF },

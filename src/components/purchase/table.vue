@@ -6,7 +6,7 @@
       <!-- <v-btn color="success" @click="Detail(record)">Detail</v-btn> -->
       <v-row align="center" justify="center">
           <a-button  icon="read" @click="Detail(record)"></a-button>
-          <a-button class="ml-3"  icon="edit" ></a-button>
+          <a-button class="ml-3"  icon="edit"  @click="Edit(record)"></a-button>
         </v-row>
     </template>
     <template slot="footer">Footer</template>
@@ -43,6 +43,9 @@ export default {
       // await this.$store.dispatch('getBillPDF', val)
       // this.$router.push('/pdf')
       window.open(process.env.VUE_APP_URL, '_blank')
+    },
+    Edit (val) {
+      this.$router.push('edit')
     }
   }
 }
